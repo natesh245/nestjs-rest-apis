@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TodoModule } from './todo/todo.module';
+import { TodoGrpcModule } from './todo-grpc/todo-grpc.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { TodoModule } from './todo/todo.module';
       autoLoadEntities: true,
     }),
     TodoModule,
+    TodoGrpcModule,
   ],
   controllers: [AppController],
   providers: [AppService],
